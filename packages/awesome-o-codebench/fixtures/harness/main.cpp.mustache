@@ -1,0 +1,43 @@
+#include <algorithm>
+#include <climits>
+#include <iostream>
+#include <string>
+#include <vector>
+
+{{USER_CODE}}
+
+static int failures = 0;
+
+void check_bool(const char* name, bool actual, bool expected) {
+  if (actual != expected) {
+    std::cerr << "FAIL " << name << " expected " << (expected ? "true" : "false")
+              << " got " << (actual ? "true" : "false") << "\n";
+    ++failures;
+  }
+}
+
+void check_int(const char* name, long long actual, long long expected) {
+  if (actual != expected) {
+    std::cerr << "FAIL " << name << " expected " << expected << " got " << actual
+              << "\n";
+    ++failures;
+  }
+}
+
+void check_string(const char* name, const std::string& actual,
+                  const std::string& expected) {
+  if (actual != expected) {
+    std::cerr << "FAIL " << name << " expected \"" << expected << "\" got \""
+              << actual << "\"\n";
+    ++failures;
+  }
+}
+
+bool vecEq(const std::vector<int>& a, const std::vector<int>& b) {
+  return a == b;
+}
+
+int main() {
+{{TESTS}}
+  return failures > 0 ? 1 : 0;
+}

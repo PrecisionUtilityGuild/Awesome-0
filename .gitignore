@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Benchmark run outputs (keep directory via .gitkeep)
+packages/awesome-o-codebench/results/*.jsonl
+.cache
+.residual-sessions/

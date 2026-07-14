@@ -1,0 +1,42 @@
+{
+  "name": "awesome-o",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "pnpm -r typecheck",
+    "test": "node --import tsx --test packages/awesome-o-codebench/src/runner/extractCode.test.ts packages/awesome-o-codebench/src/metrics/scoreCase.test.ts packages/awesome-o-codebench/src/metrics/benchmarkReport.test.ts",
+    "lint": "./node_modules/.bin/eslint .",
+    "format": "./node_modules/.bin/prettier --write .",
+    "format:check": "./node_modules/.bin/prettier --check .",
+    "smoke": "./node_modules/.bin/tsx scripts/smoke.ts",
+    "pilot": "./node_modules/.bin/tsx scripts/pilot-anthropic.ts",
+    "pilot:local": "./node_modules/.bin/tsx scripts/pilot-ollama.ts",
+    "pilot:suite": "./node_modules/.bin/tsx scripts/pilot-anthropic-suite.ts",
+    "eval:realistic": "./node_modules/.bin/tsx scripts/eval-anthropic.ts",
+    "eval:v1": "./node_modules/.bin/tsx scripts/eval-v1.ts",
+    "eval:holdout": "./node_modules/.bin/tsx scripts/eval-holdout.ts",
+    "eval:spotlight": "./node_modules/.bin/tsx scripts/eval-spotlight.ts",
+    "eval:replicate": "./node_modules/.bin/tsx scripts/eval-replicate.ts",
+    "validate:corpus": "./node_modules/.bin/tsx scripts/validate-corpus.ts",
+    "analyze:results": "./node_modules/.bin/tsx scripts/analyze-results.ts",
+    "analyze:v1": "./node_modules/.bin/tsx scripts/analyze-v1.ts",
+    "analyze:holdout": "./node_modules/.bin/tsx scripts/analyze-holdout.ts",
+    "analyze:spotlight": "./node_modules/.bin/tsx scripts/analyze-spotlight.ts",
+    "manifest:v1": "./node_modules/.bin/tsx scripts/manifest-v1.ts",
+    "replicate:pilot": "./node_modules/.bin/tsx scripts/replicate-pilot.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.2",
+    "prettier": "^3.5.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.26.0"
+  },
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "awesome-o",
+  "description": "Stops Claude from being talked out of correct code.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Precision Utility Guild"
+  }
+}

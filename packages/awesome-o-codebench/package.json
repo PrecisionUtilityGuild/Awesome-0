@@ -1,0 +1,22 @@
+{
+  "name": "awesome-o-codebench",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "./node_modules/.bin/tsx src/cli.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test src/runner/extractCode.test.ts src/metrics/scoreCase.test.ts src/metrics/benchmarkReport.test.ts",
+    "bench": "./node_modules/.bin/tsx src/cli.ts run"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "execa": "^9.5.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
